@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "yncrea.lab03.core.service")
+@ComponentScan(basePackages = "yncrea.lab03.core.service") //Scanne toutes les iformations pertinantes dans le package 'yncrea.lab03.core.service'
 public class AppConfig {
 
     public static final String DB_HOST = "localhost:3306";
@@ -15,7 +15,7 @@ public class AppConfig {
 
     public static final String DB_USER = "root";
 
-    public static final String DB_PASSWORD = "root";
+    public static final String DB_PASSWORD = "";
 
 
     @Bean

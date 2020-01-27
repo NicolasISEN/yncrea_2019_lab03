@@ -2,6 +2,7 @@ package yncrea.lab03.core.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import yncrea.lab03.core.dao.ProjectRepository;
 import yncrea.lab03.core.entity.Project;
 
 import java.util.List;
@@ -11,24 +12,25 @@ import java.util.List;
 public class ProjectService {
 
 
+    ProjectRepository projectRepository;
 
-
+    public ProjectService(ProjectRepository projectRepository) {
+        this.projectRepository = projectRepository;
+    }
 
     public void deleteAll() {
-        //TODO implement
+        projectRepository.deleteAll();
     }
 
     public void save(Project project){
-        //TODO implement
+        projectRepository.save(project);
     }
 
     public long countAll() {
-        //TODO implement
-        return 0;
+        return projectRepository.count();
     }
 
     public List<Project> findAll(){
-        //TODO implement
-        return null;
+        return projectRepository.findAll();
     }
 }
